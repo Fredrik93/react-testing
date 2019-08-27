@@ -20,7 +20,7 @@ class App extends Component {
       <Header />
 
       <section className="main">
-        <Headline   header={1}
+        <Headline   header="Posts"
          desc="Click the button to render posts" tempArr={tempArr} />
 
       </section>
