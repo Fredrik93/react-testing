@@ -8,6 +8,11 @@ const setUp = (props = {}) => {
     return component;
 };
 
+const findByTestAttribute = (component, attr) => {
+const wrapper = component.find(`[data-test='${attr}']`);
+return wrapper; 
+};
+
 describe('Header Component', () => {
 
     let component;
@@ -16,12 +21,12 @@ describe('Header Component', () => {
     });
 
     it('Should render without errors', () => {
-        const wrapper = component.find('.headerComponent');
+        const wrapper = findByTestAttribute(component, 'headerComponent');
         expect(wrapper.length).toBe(1);
     });
 
     it('Should render a logo', () => {
-        const logo = component.find('.logoIMG');
+        const logo = findByTestAttribute(component, 'logoIMG');
         expect(logo.length).toBe(1);
     });
 
