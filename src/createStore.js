@@ -6,4 +6,4 @@ export const middleWares = [ReduxThunk];
 
 export const createStoreWithMiddleware  = applyMiddleware(...middleWares)(createStore)
 
-export const store = createStoreWithMiddleware(RootReducer);
+export const store = createStoreWithMiddleware(RootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
