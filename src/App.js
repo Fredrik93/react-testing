@@ -14,7 +14,7 @@ const tempArr = [{
   fName: 'Joe',
   lName: 'Bloggs',
   email: 'joeBloggs@gmail.com',
-  age: '24',
+  age: 24,
   onlineStatus: true
 }]
 
@@ -42,7 +42,7 @@ class App extends Component {
     }
     return (
 
-      <div className="App">
+      <div className="App" data-test="appComponent">
 
         <Header />
 
